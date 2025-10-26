@@ -1,5 +1,3 @@
-Quality Assurance for "ShopWise" E-commerce Platform
-
 🎯 Project Overview
 
 This project serves as a comprehensive manual testing suite for a simulated E-commerce application, ShopWise. The goal was to demonstrate core Software Quality Analyst (SQA) skills by focusing on Test Documentation, Defect Tracking, and Platform Agnostic Testing (Web/Mobile), as required for modern product development environments.
