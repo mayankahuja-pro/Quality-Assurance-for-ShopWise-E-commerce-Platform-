@@ -23,6 +23,7 @@ The goal was to demonstrate core **Software Quality Analyst (SQA)** skills by ge
 * **Backend Validation:** Demonstrated ability to verify server-side logic and data persistence using mock **API and SQL** checks.  
 * **Platform Agnostic Testing:** Conducted responsiveness and usability testing across simulated **Web** and **Mobile** (Android/iOS) viewports.  
 * **Professional Documentation:** Adherence to standard industry formats for Test Plans, Test Cases, and Defect Reports.
+<img width="1891" height="1040" alt="image" src="https://github.com/user-attachments/assets/2747867b-b8c4-46cb-aa45-2f0444f4e398" />
 
 ## **💻 How to View and Execute**
 
