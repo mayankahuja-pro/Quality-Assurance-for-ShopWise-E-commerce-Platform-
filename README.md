@@ -8,7 +8,7 @@ The goal was to demonstrate core **Software Quality Analyst (SQA)** skills by ge
 
 ## **🛠️ Key Deliverables**
 
-| Artifact | Description | JD Skill Alignment |
+| Artifact | Description |  Skill Alignment |
 | :---- | :---- | :---- |
 | **Test\_Plan\_ShopWise.md** | Outlines the scope, strategy, objectives, and environment for testing the Shopping Cart Module. | **Create comprehensive Test Plans.** |
 | **Test\_Cases\_ShopWise.md** | Detailed matrix of **10+ manual test cases** (Positive, Negative, Boundary) covering Web and Mobile views. | **Create detailed and comprehensive Test Cases.** |
