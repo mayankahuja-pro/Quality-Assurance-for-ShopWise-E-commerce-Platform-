@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopWise E-Commerce Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for mobile view simulation */
+        @media (max-width: 640px) {
+            .mobile-view-card {
+                width: 95%; /* Make card wider on small screens */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans p-4">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md p-4 rounded-lg flex justify-between items-center mb-8">
+        <h1 class="text-3xl font-bold text-indigo-700">ShopWise 🛍️</h1>
+        <div class="space-x-4">
+            <button id="cart-button" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-150">
+                Cart (<span id="cart-count">0</span>)
+            </button>
+            <button class="text-gray-600 hover:text-indigo-700 font-medium">Login</button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Featured Products</h2>
+
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+            <!-- Product 1 -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition mobile-view-card">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Wireless Headphones</h3>
+                <p class="text-indigo-600 text-lg font-semibold mb-4">₹ 2,999</p>
+                <button onclick="addToCart(1)" class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg font-medium">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition mobile-view-card">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Smart Watch</h3>
+                <p class="text-indigo-600 text-lg font-semibold mb-4">₹ 4,500</p>
+                <button onclick="addToCart(2)" class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg font-medium">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 (Out of Stock Scenario) -->
+            <div class="bg-white p-6 rounded-xl shadow-lg mobile-view-card">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">4K Monitor</h3>
+                <p class="text-red-500 text-lg font-semibold mb-4">Out of Stock</p>
+                <button disabled class="w-full bg-gray-400 text-white py-2 rounded-lg font-medium cursor-not-allowed">Out of Stock</button>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Simple Cart Functionality Script -->
+    <script>
+        let cartItems = 0;
+        const cartCountElement = document.getElementById('cart-count');
+
+        // Function to simulate adding an item
+        function addToCart(productId) {
+            cartItems++;
+            cartCountElement.textContent = cartItems;
+            console.log(`Product ${productId} added. Cart: ${cartItems}`);
+            showMessage(`Product ${productId} added to cart!`, 'success');
+
+            // Bug Simulation for Test Case 2.1 (Simulated Data/API issue)
+            if (productId === 1 && cartItems > 5) {
+                showMessage('Error: Maximum quantity exceeded for this item!', 'error');
+            }
+        }
+
+        // Simple Message Display (Instead of alert())
+        function showMessage(message, type) {
+            const container = document.createElement('div');
+            container.className = `fixed top-4 right-4 p-4 rounded-lg shadow-xl text-white z-50 transition-opacity duration-300`;
+            container.style.opacity = 1;
+
+            if (type === 'success') {
+                container.classList.add('bg-blue-500');
+            } else if (type === 'error') {
+                container.classList.add('bg-red-500');
+            }
+
+            container.textContent = message;
+            document.body.appendChild(container);
+
+            setTimeout(() => {
+                container.style.opacity = 0;
+                container.addEventListener('transitionend', () => container.remove());
+            }, 3000);
+        }
+
+        // Test Setup: Use the console to simulate SQL/API checks
+        console.log("--- QA Console Setup ---");
+        console.log("Mock SQL Query: SELECT count(*) FROM products_table WHERE status='active'; // Expected 2");
+        console.log("Mock API Check: GET /api/products/1 // Response: { status: 200, price: 2999 }");
+
+    </script>
+</body>
+</html>
