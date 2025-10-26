@@ -1,51 +1,33 @@
-🎯 Project Overview
+# **Quality Assurance for "ShopWise" E-commerce Platform**
 
-This project serves as a comprehensive manual testing suite for a simulated E-commerce application, ShopWise. The goal was to demonstrate core Software Quality Analyst (SQA) skills by focusing on Test Documentation, Defect Tracking, and Platform Agnostic Testing (Web/Mobile), as required for modern product development environments.
+## **🎯 Project Overview**
 
-This work specifically addresses the need to create "detailed and comprehensive test plans and test cases" for products spanning "web & Android/iOS devices," as outlined in the SQA job description.
+This project serves as a comprehensive Quality Assurance (QA) suite for a simulated **E-commerce** application, **ShopWise**, focusing on the critical Shopping Cart and Order Placement modules.
 
-🛠️ Key Deliverables
+The goal was to demonstrate core **Software Quality Analyst (SQA)** skills by generating essential test artifacts and analyses, directly addressing the need to create "detailed and comprehensive test plans and test cases" for products spanning **Web & Android/iOS devices**, and exhibiting **attention to detail**.
 
-Artifact
+## **🛠️ Key Deliverables**
 
-Description
+| Artifact | Description | JD Skill Alignment |
+| :---- | :---- | :---- |
+| **Test\_Plan\_ShopWise.md** | Outlines the scope, strategy, objectives, and environment for testing the Shopping Cart Module. | **Create comprehensive Test Plans.** |
+| **Test\_Cases\_ShopWise.md** | Detailed matrix of **10+ manual test cases** (Positive, Negative, Boundary) covering Web and Mobile views. | **Create detailed and comprehensive Test Cases.** |
+| **API\_Test\_Scenarios.md** | Defines test cases for backend endpoints (GET and POST) to verify product data retrieval and cart updates. | **Basic knowledge of API's.** |
+| **SQL\_Test\_Scenarios.md** | Outlines specific **SQL queries** required to verify data integrity post-transaction (e.g., checking inventory deduction, order status). | **Basic knowledge of SQL.** |
+| **Defect\_Report\_ShopWise.md** | Formal documentation for a high-priority bug (SW-CART-001) found during execution, including steps to reproduce. | **Identify bugs and communicate them proactively.** |
+| **shopwise\_app.html** | A simple mock E-commerce front-end application (System Under Test, SUT) used for manual execution. | **Basic knowledge of HTML/CSS** (used for defect inspection). |
 
-JD Skill Alignment
+## **🔗 Technical Skills Showcased**
 
-Test_Plan_ShopWise.md
+* **Manual Testing:** Executed functional, usability, platform, and regression tests.  
+* **Backend Validation:** Demonstrated ability to verify server-side logic and data persistence using mock **API and SQL** checks.  
+* **Platform Agnostic Testing:** Conducted responsiveness and usability testing across simulated **Web** and **Mobile** (Android/iOS) viewports.  
+* **Professional Documentation:** Adherence to standard industry formats for Test Plans, Test Cases, and Defect Reports.
 
-Outlines the scope, strategy, objectives, and environment for testing the Shopping Cart Module.
+## **💻 How to View and Execute**
 
-Create comprehensive Test Plans.
+To view the mock application and manually execute the test cases:
 
-Test_Cases_ShopWise.md
-
-Detailed matrix of 10+ manual test cases (Positive, Negative, Boundary) covering Web and Mobile views.
-
-Create detailed and comprehensive Test Cases.
-
-Defect_Report_ShopWise.md
-
-Documentation for a high-priority bug (SW-CART-001) found during execution, including steps to reproduce and expected results.
-
-Identify bugs and communicate them proactively.
-
-shopwise_app.html
-
-A simple mock E-commerce front-end application (System Under Test, SUT) to execute the manual test cases.
-
-Basic knowledge of HTML/CSS (used for visual/responsive defect inspection).
-
-🔗 Technical Skills Showcased
-
-Manual Testing: Executed functional, usability, and data integrity tests.
-
-Test Documentation: Adherence to standard industry formats (Test Plan, Test Case Matrix, Defect Report).
-
-API/SQL Understanding: The test cases include scenarios for validating data consistency in the backend (mocked SQL/API checks).
-
-Platform Testing: Tested the responsiveness and usability of the application across simulated Web and Mobile (Android/iOS) environments.
-
-💻 How to View
-
-To execute the manual tests, simply download the repository and open the shopwise_app.html file in any modern web browser (e.g., Chrome). Use the browser's developer tools to switch to mobile emulation mode for the Mobile Responsiveness Test Cases.
+1. Download or clone this repository.  
+2. Open the **shopwise\_app.html** file in any modern web browser.  
+3. Use the browser's developer tools (F12) to switch to the **mobile emulation mode** to test the responsiveness and mobile-specific test cases.
